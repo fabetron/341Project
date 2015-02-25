@@ -1,0 +1,48 @@
+Schedule Facilitating System for the School of Information Technology
+
+Team Conflict
+
+Aaron Karlix
+Matt Faber
+Seth Davis
+
+
+Competencies
+
+Aaron Karlix
+
+Design and Documentation – interested
+Implementation – interested
+Java Programming – Will implement but not confident
+Relevant skill – Excellent communication and project management skills
+
+Matt Faber 
+
+Design and Documentation – no interest
+Implementation – interested
+Java Programming – Confident to implement anything and learning if necessary 
+Relevant skill – Excellent implementation skills
+
+Seth Davis 
+
+ Design and Documentation – interested
+Implementation – very interested
+Java Programming – Confident to implement anything and learning if necessary 
+Relevant skill – Testing expert
+
+Sprint 1 User Stories
+
+Per classroom and time slot: multiple sections
+Per instructor and time slot: multiple sections
+More teaching assignments to instructor than expected
+Per instructor: insufficient time between sections if in different classrooms
+
+Sprint 2 User Stories
+
+Wrong time slot for given section
+Time slot does not obey faculty preference
+Course section does not obey faculty preference
+Course sections that should not overlap in time (if implementable)
+
+Aaron Karlix will be the design leader
+Seth Davis will be the implementation leader
