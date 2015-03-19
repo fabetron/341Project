@@ -1,6 +1,14 @@
-public class ScheduleManager {
+import java.awt.List;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
+
+public class ProfessorClassConflicts {
 	
-	private List<String> rowList = new ArrayList<String>(); //List to store file as Strings
+	private ArrayList<String> rowList = new ArrayList<String>(); //List to store file as Strings
 	
 	public void readData(BufferedReader schedule) throws IOException{
 	
@@ -15,14 +23,14 @@ public class ScheduleManager {
 	public void findInstructorConflict(){
 		String classes;
 		String[] professorClasses; //Temp place to store schedule information
-		List<String> professorList = new ArrayList<String>(); //A list to hold all professors and their scheduled classes
+		ArrayList<String> professorList = new ArrayList<String>(); //A list to hold all professors and their scheduled classes
 		Set<String>allClasses = new HashSet<String>(); //Set to check for duplicate classes
 		Set<String>duplicateClasses = new HashSet<String>(); //Set to store duplicate classes
 		
 		for(String row : rowList){ //Iterates through rowList
 			professorClasses = row.split(","); 
 			if(professorClasses.length < 5){
-				List<String> lessThanList = new ArrayList<String>(Arrays.asList(professorClasses)); //Handles blank cells at the end of array
+				ArrayList<String> lessThanList = new ArrayList<String>(Arrays.asList(professorClasses)); //Handles blank cells at the end of array
 				lessThanList.add(" ");
 				classes = lessThanList.get(0) + ", " + lessThanList.get(3) + ", " + lessThanList.get(4);
 			}
@@ -50,14 +58,14 @@ public class ScheduleManager {
 		
 		String times;
 		String[] classTimes; //Temp place to store schedule information
-		List<String> classList = new ArrayList<String>(); //A list to hold all classes and scheduled times and days
+		ArrayList<String> classList = new ArrayList<String>(); //A list to hold all classes and scheduled times and days
 		Set<String>allTimes = new HashSet<String>(); //Set to check for duplicate times
 		Set<String>duplicateTimes = new HashSet<String>(); //Set to store duplicate times
 		
 		for(String row : rowList){ //Iterates through rowList
 			classTimes = row.split(",");
 			if(classTimes.length < 5){
-				List<String> lessThanList2 = new ArrayList<String>(Arrays.asList(classTimes)); //Handles blank cells at the end of array
+				ArrayList<String> lessThanList2 = new ArrayList<String>(Arrays.asList(classTimes)); //Handles blank cells at the end of array
 				lessThanList2.add(" ");
 				times = lessThanList2.get(2) + ", " + lessThanList2.get(3) + ", " + lessThanList2.get(4);
 			}
